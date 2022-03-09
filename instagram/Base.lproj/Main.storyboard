@@ -85,14 +85,128 @@
                     <view key="view" contentMode="scaleToFill" id="TDi-yn-Rp6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-Aw-drA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="503" id="m1p-EG-SB5" customClass="PostCell" customModule="instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="503"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m1p-EG-SB5" id="NVW-ak-yWC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="503"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-Zt-JPO">
+                                                    <rect key="frame" x="8" y="8" width="398" height="447"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="DDT-Zt-JPO" secondAttribute="height" multiplier="398:447" id="DQB-C6-LaU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-Pu-6P7">
+                                                    <rect key="frame" x="8" y="463" width="55" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wow,I love pictures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkv-AJ-bXu">
+                                                    <rect key="frame" x="71" y="463" width="144" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lkv-AJ-bXu" firstAttribute="leading" secondItem="ib3-Pu-6P7" secondAttribute="trailing" constant="8" id="3Hs-MB-IqC"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="lkv-AJ-bXu" secondAttribute="bottom" constant="8" id="Ctp-cQ-2hV"/>
+                                                <constraint firstItem="ib3-Pu-6P7" firstAttribute="top" secondItem="DDT-Zt-JPO" secondAttribute="bottom" constant="8" id="INL-x1-bOx"/>
+                                                <constraint firstItem="DDT-Zt-JPO" firstAttribute="leading" secondItem="NVW-ak-yWC" secondAttribute="leading" constant="8" id="IVd-0G-7oL"/>
+                                                <constraint firstAttribute="trailing" secondItem="DDT-Zt-JPO" secondAttribute="trailing" constant="8" id="LRY-FG-D6g"/>
+                                                <constraint firstItem="lkv-AJ-bXu" firstAttribute="top" secondItem="DDT-Zt-JPO" secondAttribute="bottom" constant="8" id="M2P-AS-hsO"/>
+                                                <constraint firstItem="DDT-Zt-JPO" firstAttribute="top" secondItem="NVW-ak-yWC" secondAttribute="top" constant="8" id="Pb5-bx-Rsu"/>
+                                                <constraint firstAttribute="trailing" secondItem="DDT-Zt-JPO" secondAttribute="trailing" constant="8" id="d7r-FC-NZw"/>
+                                                <constraint firstItem="DDT-Zt-JPO" firstAttribute="top" secondItem="NVW-ak-yWC" secondAttribute="top" constant="8" id="dbZ-mp-n2M"/>
+                                                <constraint firstItem="DDT-Zt-JPO" firstAttribute="leading" secondItem="NVW-ak-yWC" secondAttribute="leading" constant="8" id="jRU-9M-AY1"/>
+                                                <constraint firstItem="ib3-Pu-6P7" firstAttribute="top" secondItem="DDT-Zt-JPO" secondAttribute="bottom" constant="8" id="qtB-vG-6XY"/>
+                                                <constraint firstItem="ib3-Pu-6P7" firstAttribute="leading" secondItem="NVW-ak-yWC" secondAttribute="leading" constant="8" id="yYc-5D-Gsf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="lkv-AJ-bXu" id="u00-lg-aFv"/>
+                                            <outlet property="photoView" destination="DDT-Zt-JPO" id="w6K-MD-N65"/>
+                                            <outlet property="usernameLabel" destination="ib3-Pu-6P7" id="Xw0-GL-hJR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="URg-e6-HMZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h3t-RO-hL2"/>
+                    <navigationItem key="navigationItem" id="h3t-RO-hL2">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="xgU-pw-1yQ">
+                            <connections>
+                                <segue destination="fEf-gF-QGv" kind="presentation" id="wfk-kq-OOx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="PgT-Aw-drA" id="kCo-Oz-DQA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9m-dT-akn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726.0869565217392" y="137.94642857142856"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="LYN-5W-B3J">
+            <objects>
+                <viewController id="fEf-gF-QGv" customClass="CameraViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5g-2g-D11">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="hQT-5R-uOz">
+                                <rect key="frame" x="20" y="53" width="374" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XBy-tQ-rfL" appends="YES" id="znk-CO-Ls1"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-w0-CBm">
+                                <rect key="frame" x="20" y="392" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9w-Ne-tXI">
+                                <rect key="frame" x="20" y="449" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="fEf-gF-QGv" eventType="touchUpInside" id="bRC-mE-07X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IA1-m9-0kh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="DJp-w0-CBm" id="ily-XH-zHh"/>
+                        <outlet property="imageView" destination="hQT-5R-uOz" id="E27-Vi-bLT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMS-8w-K6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XBy-tQ-rfL">
+                    <connections>
+                        <action selector="onCameraButton:" destination="fEf-gF-QGv" id="WeX-gC-2kS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2655" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n1r-GQ-Q3d">
@@ -114,6 +228,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
