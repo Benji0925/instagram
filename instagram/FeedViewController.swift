@@ -123,7 +123,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         //            }
         //        }
         
-        //    }
+            }
         
         /*
          // MARK: - Navigation
@@ -144,7 +144,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else { return }
             delegate.window?.rootViewController = LoginViewController
         }
-    }
+    
+    
 }
 
 
